@@ -3,23 +3,140 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Albert Ganea</title>
+  <title>Plt.maj Albert Ganea</title>
   <style>
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin:0; background:#000000; display:flex; justify-content:center; padding:20px; }
-    .card { background:white; border-radius:14px; box-shadow:0 8px 26px rgba(0,0,0,0.10); padding:18px; max-width:600px; width:100%; text-align:center; }
-    img { max-width:100%; border-radius:10px; }
-    audio { width:100%; margin-top:16px; }
-    h2 { margin-bottom:12px; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      /* Increased top padding so the card is slightly lower from the top */
+      padding: 40px 20px 20px;
+    }
+
+    .card {
+      background: #202020;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      max-width: 600px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .photo {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info-text {
+      flex: 1;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .rank {
+      font-size: 1rem;
+      color: #9a9a9a;
+      margin-bottom: 0px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 6px;
+      filter: invert(1) grayscale(0);
+    }
+
+    .whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      margin-top: 0px;
+      background-color: #25d366;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 50px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      transition: background 0.2s, transform 0.2s;
+      width: fit-content;
+    }
+
+    .whatsapp:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.05);
+    }
+
+    .whatsapp .icon {
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp .text {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #9a9a9a;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <h2></h2>
-    <img src="https://domitiantincaba.github.io/albert_ganea/albert_ganea.jpeg" alt="Albert Ganea">
+    <!-- FOTOGRAFIA MILITARĂ -->
+    <img class="photo" src="https://domitiantincaba.github.io/albert_ganea/albert_ganea.jpeg" alt="Plt.maj Albert Ganea">
+
+    <!-- INFORMAȚII -->
+    <div class="info">
+      <div class="header">
+        <div class="info-text">
+          <div class="title">Plt.maj. Albert Ganea</div>
+          <div class="rank">Grupul 5 EOD</div>
+        </div>
+        <!-- BUTON WHATSAPP -->
+        <a class="whatsapp" href="https://wa.me/40724573263" target="_blank">
+          <span class="icon">💬</span>
+          <span class="text"></span>
+        </a>
+      </div>
+
+      <!-- PLAYER AUDIO -->
       <audio controls autoplay>
-      <source src="https://domitiantincaba.github.io/albert_ganea/albert_ganea.mp3" type="audio/mpeg">
-      Playerul audio nu este suportat.
-    </audio>
+        <source src="https://domitiantincaba.github.io/albert_ganea/albert_ganea.mp3" type="audio/mp3">
+        Browserul tău nu suportă redarea audio.
+      </audio> 
+    </div>
   </div>
+
+  <footer>© 2025 Made with &#9829; by Domitian Tincaba</footer> 
 </body>
 </html>
